@@ -13,6 +13,18 @@ app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
 
+if (process.env.JAWSDB_URL){
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: "",
+    database: "attilios_db"
+  });
+};
+
 // Sets up the Express app to handle body data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -57,8 +69,6 @@ function createRecord() {
 }
 
 
-
-
 // Routes=============================================================
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "Survey.html"));
@@ -92,3 +102,8 @@ app.post("/api/new", function(req, res) {
   createRecord()
   return res.json("yes");
 });
+
+
+
+connection.connect();
+module.exports = connection;
