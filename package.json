@@ -1,0 +1,27 @@
+{
+  "name": "friend_finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrew-apicello/friend_finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrew-apicello/friend_finder/issues"
+  },
+  "homepage": "https://github.com/andrew-apicello/friend_finder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "d3": "^4.11.0",
+    "express": "^4.16.1",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0"
+  }
+}
