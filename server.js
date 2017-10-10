@@ -21,7 +21,7 @@ if (process.env.JAWSDB_URL){
     port: 3306,
     user: "root",
     password: "",
-    database: "attilios_db"
+    database: "m1ud2lm69lc07vwo"
   });
 };
 
